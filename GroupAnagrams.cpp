@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
@@ -17,4 +18,25 @@ public:
         }
         return ans;
     }
+=======
+class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        map<string,vector<string>> mp;
+        int n=strs.size();
+        for(int i=0;i<n;i++)
+        {
+            string el=strs[i];
+            sort(el.begin(),el.end());
+
+            mp[el].push_back(strs[i]);
+        }
+        vector<vector<string>> ans;
+        for(auto&it:mp)
+        {
+            ans.push_back(it.second);
+        }
+        return ans;
+    }
+>>>>>>> 64e1cc01c1d4b11800d9fc7fe60ac491198f4c1f
 };

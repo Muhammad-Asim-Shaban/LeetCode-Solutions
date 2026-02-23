@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -14,4 +15,22 @@ public:
         }
         return check;
     }
+=======
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        bool check=false;
+        int n=nums.size();
+        for(int i=1;i<n;i++)
+        {
+            if(nums[i]==nums[i-1])
+            {
+                check=true;
+                break;
+            }
+        }
+        return check;
+    }
+>>>>>>> 64e1cc01c1d4b11800d9fc7fe60ac491198f4c1f
 };
